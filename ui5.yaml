@@ -1,0 +1,39 @@
+specVersion: "2.0"
+metadata:
+  name: ui5-ts-shim-showcase
+type: application
+framework:
+  name: OpenUI5
+  version: "1.94.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: sap.ui.unified
+    - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+  - name: ui5-middleware-livereload
+    afterMiddleware: compression
+    configuration:
+      debug: true
+      extraExts: "xml,json,properties"
+      port: 35729
+      path: "webapp"
+# Read more about project shims here: https://sap.github.io/ui5-tooling/pages/extensibility/ProjectShims/
+---
+specVersion: "2.5"
+kind: extension
+type: project-shim
+metadata:
+  name: ui5-ts-shim-showcase.thirdparty
+shims:
+  configurations:
+    lodash: # dependency name as defined in package.json
+      specVersion: "2.5"
+      type: module # module type
+      metadata:
+        name: lodash
+      resources:
+        configuration:
+          paths:
+            "/thirdparty/lodash/": "" # map root directory of lodash module into projects' thirdparty namespace
