@@ -1,5 +1,7 @@
 # UI5 Showcase Project Shims For TypeScript
 
+> ⚠️ Using the UI5 tooling extenstion [`ui5-tooling-modules`](https://www.npmjs.com/package/ui5-tooling-modules) simplifies the consumption of OSS libraries from NPM packages significantly. A newer tutorial, how you can consume OSS libraries easily with a tooling extension can be found here: https://github.com/ui5-community/ui5-ts-modules-showcase
+
 This project demonstrates how to use project shims for external libraries, use them at runtime in UI5 applications and to benefit from the TypeScript support for code completion.
 
 In order to use OSS libraries from NPM packages at development time with code completion and finally at runtime you need to understand two concepts:
